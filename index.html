@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Message</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6aa9ff, #b3d4ff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#login, .container {
+    background: white;
+    padding: 20px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+
+h1, h2 {
+    margin: 0 0 15px 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #0078ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #005fcc;
+}
+
+#chat {
+    width: 350px;
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#chat p {
+    background: #e8f0ff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border-left: 4px solid #0078ff;
+}
+</style>
+
+</head>
+<body>
+  <header style="color: red;"> <h1>Was sagt die Welt?</h1> </header>
+
+
+<div id="login">
+<h2 style="color: red;">Bitte Namen reinschreiben:</h2>
+<input id="content" type="text">
+<button style="color: black;" onclick="enterSide()">Weiter</button>
+</div>
+ 
+  <div class="container">
+  <h2>CHAT:</h2>
+ 
+    <form onsubmit="btn(); return false">
+ <input id="eingabe" type="text" required placeholder="Nachricht eingeben">
+<button style="color: black;">Senden</button>
+</form>
+<div></div>
+<div></div>
+  </div>
+<div id="chat"></div>
+ <button onclick="clearChat()" style="width: 2cm;" >Chat löschen</button>
+<script>
+function enterSite() {
+    const name = document.getElementById("nameInput").value;
+
+    if (name.trim() !== "") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    } else {
+        alert("Bitte gib einen Namen ein.");
+    }
+}
+</script>
+
+   <script src = "script.js"></script>
+</body>
+</html>
