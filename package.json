@@ -1,0 +1,13 @@
+{
+  "name": "world-message-server",
+  "version": "1.0.0",
+  "description": "WebSocket Server für World Message",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.17.0"
+  }
+}
