@@ -2,6 +2,8 @@ let chat = document.getElementById("chat")
 let eingabe = document.getElementById("eingabe")
 let Name = document.getElementById("content")
 // Beim Laden der Seite gespeicherte Daten wiederherstellen
+const socket = new WebSocket("wss://World-Message.onrender.com");
+
 window.onload = () => {
     if (localStorage.getItem("username")) {
         Name.value = localStorage.getItem("username")
@@ -23,6 +25,8 @@ function btn () {
         // Namen speichern
         localStorage.setItem("username", Name.value)
    eingabe.value = ""
+   socket.send(Name.value + ": " + eingabe.value);
+
 
 }
 
